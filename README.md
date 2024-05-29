@@ -32,33 +32,33 @@ This project is an online bidding system built using Node.js, Express and Prisma
 
 
 .
-├── controllers
-│   ├── authController.js
-│   ├── bidController.js
-│   ├── itemController.js
-│   └── notificationController.js
-├── middlewares
-│   └── authMiddleware.js
-├── models
-│   └── prisma
-│       └── schema.prisma
-├── routes
-│   ├── authRoutes.js
-│   ├── bidRoutes.js
-│   ├── itemRoutes.js
-│   └── notificationRoutes.js
-├── services
-│   ├── authService.js
-│   ├── bidService.js
-│   ├── itemService.js
-│   └── notificationService.js
-├── config
-│   └── database.js
-├── utils
-│   └── multerConfig.js
-├── .env
-├── package.json
-└── server.js
+- ├── controllers
+- │   ├── authController.js
+- │   ├── bidController.js
+- │   ├── itemController.js
+- │   └── notificationController.js
+- ├── middlewares
+- │   └── authMiddleware.js
+- ├── models
+- │   └── prisma
+- │       └── schema.prisma
+- ├── routes
+- │   ├── authRoutes.js
+- │   ├── bidRoutes.js
+- │   ├── itemRoutes.js
+- │   └── notificationRoutes.js
+- ├── services
+- │   ├── authService.js
+- │   ├── bidService.js
+- │   ├── itemService.js
+- │   └── notificationService.js
+- ├── config
+- │   └── database.js
+- ├── utils
+- │   └── multerConfig.js
+- ├── .env
+- ├── package.json
+- └── server.js
 
 ## Setup and Installation
 
@@ -69,8 +69,8 @@ This project is an online bidding system built using Node.js, Express and Prisma
 ## Installation 
 
 1. Clone repository
-git clone https://github.com/jaydeep203/online-bidding.git
-cd online-bidding-system
+- git clone https://github.com/jaydeep203/online-bidding.git
+- cd online-bidding-system
 
 2. Install Dependancies
 npm install
