@@ -39,8 +39,7 @@ This project is an online bidding system built using Node.js, Express and Prisma
 - │   └── notificationController.js
 - ├── middlewares
 - │   └── authMiddleware.js
-- ├── models
-- │   └── prisma
+- ├── prisma
 - │       └── schema.prisma
 - ├── routes
 - │   ├── authRoutes.js
