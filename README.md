@@ -54,8 +54,7 @@ This project is an online bidding system built using Node.js, Express and Prisma
 - │   └── notificationService.js
 - ├── config
 - │   └── database.js
-- ├── utils
-- │   └── multerConfig.js
+- ├── uploads/
 - ├── .env
 - ├── package.json
 - └── server.js
