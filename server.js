@@ -9,7 +9,7 @@ const itemRoutes = require("./routes/itemRoutes");
 const bidRoutes = require("./routes/bidRoutes");
 const notificationRoutes = require("./routes/notificationRoutes");
 
-const PORT=8000;
+const port= process.env.PORT || 8000;
 
 dotenv.config();
 const prisma = new PrismaClient();
@@ -40,8 +40,8 @@ app.post("/post", async(req, res)=>{
     res.json(user);
 });
 
-app.listen(PORT, (req, res) => {
-    console.log("Website is working on http://localhost:"+PORT);
+app.listen(port, (req, res) => {
+    console.log("Website is working on http://localhost:"+port);
 });
 
 process.on('SIGINT', async () => {
