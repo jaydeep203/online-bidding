@@ -2,6 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const dotenv = require("dotenv");
 const {PrismaClient} = require("@prisma/client");
+const cors = require("cors");
 
 const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
@@ -18,6 +19,7 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.json());
 
+app.use(cors());
 
 app.use("/users", authRoutes);
 app.use("/users", userRoutes);
@@ -32,13 +34,6 @@ app.get("/", (req, res)=>{
     });
 });
 
-app.post("/post", async(req, res)=>{
-    const {name, email}= req.body;
-    const user = await prisma.user.create({
-        data:{ name, email}
-    });
-    res.json(user);
-});
 
 app.listen(port, (req, res) => {
     console.log("Website is working on http://localhost:"+port);
