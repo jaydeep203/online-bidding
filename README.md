@@ -74,7 +74,7 @@ This project is an online bidding system built using Node.js, Express and Prisma
 npm install
 
 3. Setup Environment (.env)
-- DATABASE_URL="postgres://postgres.[name]:[password]@aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres"
+- DATABASE_URL="postgres database connection string"
 - JWT_SECRET="[secret key]"
 
 4. Setup Supabase
