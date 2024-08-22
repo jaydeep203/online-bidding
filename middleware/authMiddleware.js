@@ -1,5 +1,4 @@
 const jwt = require("jsonwebtoken");
-const prisma = require("../config/database");
 
 const authMiddleware = async( req, res, next) => {
 
@@ -11,28 +10,16 @@ const authMiddleware = async( req, res, next) => {
 
     const token = authHeader.split(' ')[1];
 
-    try{
-        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
 
-        const user = await prisma.user.findUnique({
-            where:{
-                id:decoded.userId
-            }
-        });
-
-        if(!user){
-            return res.status(401).json({message: "User not found."});
-        }
-
-        req.user = user;
+    if(decoded.userId){
+        req.token = decoded.userId;
         next();
-
-
     }
-    catch(error){
+    else{
         return res.status(401).json({message: "Token invalid."});
     }
-
+    
 };
 
 module.exports = authMiddleware;
